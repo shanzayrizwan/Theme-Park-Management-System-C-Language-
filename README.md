@@ -77,26 +77,26 @@ With a wristband, the **first ride of each type is free**.
 
 - A C compiler (GCC or MinGW)
 - [Raylib](https://www.raylib.com/) version 5.0 or newer
-- `raygui.h` (single-header file), placed in the same folder as `park.c`
+- `raygui.h` (single-header file), placed in the same folder as `park1.c`
 
 ### Build
 
 **Windows (MinGW):**
 
 ```bash
-gcc park.c -o park.exe -lraylib -lopengl32 -lgdi32 -lwinmm
+gcc park1.c -o park.exe -lraylib -lopengl32 -lgdi32 -lwinmm
 ```
 
 **Linux:**
 
 ```bash
-gcc park.c -o park -lraylib -lm -lpthread -ldl -lrt -lX11
+gcc park1.c -o park -lraylib -lm -lpthread -ldl -lrt -lX11
 ```
 
 **macOS:**
 
 ```bash
-gcc park.c -o park -lraylib -framework OpenGL -framework Cocoa -framework IOKit
+gcc park1.c -o park -lraylib -framework OpenGL -framework Cocoa -framework IOKit
 ```
 
 ### Optional Sound
@@ -122,7 +122,7 @@ Place these files next to the program to enable audio. The app runs fine without
 ## 🔐 Access and Passwords
 
 - **Gate passwords** for each ticket code are set in the code (`categoryPassword`).
-- **Admin login** uses the password defined as `ADMIN_PASSWORD` in `park.c`. It is currently `YES`, which is for demo use only. Change it before using the app for anything real.
+- **Admin login** uses the password defined as `ADMIN_PASSWORD` in `park1.c`. It is currently `YES`, which is for demo use only. Change it before using the app for anything real.
 
 ---
 
@@ -137,7 +137,7 @@ Place these files next to the program to enable audio. The app runs fine without
 
 ```
 .
-├── park.c        # The whole program (logic + GUI)
+├── park1.c        # The whole program (logic + GUI)
 ├── raygui.h      # raygui single-header library (you provide it)
 ├── bgsound.mp3   # optional background music
 └── click.wav     # optional click sound
